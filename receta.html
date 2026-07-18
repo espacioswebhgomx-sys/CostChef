@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CostChef - Editar Receta</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header><h2>CostChef - Editar Receta</h2></header>
+<div class="container">
+<p><a href="productos.html">← Volver al catálogo</a></p>
+
+<form id="frmReceta">
+<div class="grid">
+<div><label>Nombre</label><input id="nombreProducto" type="text"></div>
+<div><label>Categoría</label><input id="categoria" type="text"></div>
+<div><label>Porciones</label><input id="porciones" type="number" value="1"></div>
+</div>
+
+<h3>Ingredientes</h3>
+<table id="t">
+<thead><tr><th>Ingrediente</th><th>Unidad</th><th>Cant. usada</th><th>Cant. compra</th><th>Precio</th><th>Costo</th></tr></thead>
+<tbody>
+<tr>
+<td><input></td>
+<td><input></td>
+<td><input type="number"></td>
+<td><input type="number"></td>
+<td><input type="number"></td>
+<td class="cost">0.00</td>
+</tr>
+</tbody>
+</table>
+
+<button type="button" id="agregar">+ Ingrediente</button>
+
+<h3>Gastos</h3>
+<div class="grid">
+<div><label>Gas</label><input id="gas" type="number" value="0"></div>
+<div><label>Luz</label><input id="luz" type="number" value="0"></div>
+<div><label>Agua</label><input id="agua" type="number" value="0"></div>
+<div><label>Empaque</label><input id="emp" type="number" value="0"></div>
+<div><label>Mano de obra</label><input id="mo" type="number" value="0"></div>
+</div>
+
+<h3>Resumen</h3>
+<div class="summary">
+<div>Total ingredientes: $<span id="ti">0.00</span></div>
+<div>Gastos: $<span id="tg">0.00</span></div>
+<div>Costo producción: $<span id="cp">0.00</span></div>
+<div>Precio venta: $<span id="pv">0.00</span></div>
+<div>Costo por porción: $<span id="pp">0.00</span></div>
+<div>Ganancia por porción: $<span id="gp">0.00</span></div>
+</div>
+
+<p>
+<button type="button" id="guardar">Guardar cambios</button>
+<a href="productos.html"><button type="button">Cancelar</button></a>
+</p>
+</form>
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/calculos.js"></script>
+<script src="js/receta.js"></script>
+</body>
+</html>
