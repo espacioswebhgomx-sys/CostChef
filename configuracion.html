@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CostChef - Configuración</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header><h2>Configuración de CostChef</h2></header>
+<div class="container">
+<p><a href="productos.html">← Volver al catálogo</a></p>
+
+<form id="frmConfig">
+<div class="card">
+<h3>Datos de la empresa</h3>
+
+<label>Nombre de la empresa</label>
+<input type="text" id="empresa" placeholder="Mi Restaurante">
+
+<label>RFC</label>
+<input type="text" id="rfc">
+
+<label>Moneda</label>
+<select id="moneda">
+<option value="MXN">Peso Mexicano (MXN)</option>
+<option value="USD">Dólar (USD)</option>
+<option value="EUR">Euro (EUR)</option>
+</select>
+
+<label>IVA (%)</label>
+<input type="number" id="iva" value="16">
+
+<label>Utilidad (%)</label>
+<input type="number" id="utilidad" value="40">
+
+<label>Logotipo</label>
+<input type="file" id="logo" accept="image/*">
+
+<hr>
+
+<button type="button" id="guardarConfig">Guardar configuración</button>
+<button type="reset">Restablecer</button>
+<a href="productos.html"><button type="button">Cancelar</button></a>
+</div>
+</form>
+
+<div class="card">
+<h3>Información</h3>
+<p>La configuración se almacena localmente y será utilizada como valores predeterminados para todas las recetas.</p>
+<ul>
+<li>Empresa</li>
+<li>Moneda</li>
+<li>IVA</li>
+<li>Utilidad</li>
+<li>Logotipo (próxima versión)</li>
+</ul>
+</div>
+
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/config.js"></script>
+</body>
+</html>
